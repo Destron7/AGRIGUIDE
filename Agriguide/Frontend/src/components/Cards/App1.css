@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins, sans-serif; /* Added fallback font */
+  box-sizing: border-box;
+}
+
+body {
+  background: #1e1f21;
+  color: #fff;
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+#card-area {
+  padding: 10px;
+}
+
+.box-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted minimum width for responsiveness */
+  grid-gap: 40px;
+  margin-top: 20px;
+}
+
+.box {
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.box img {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  /* background: linear-gradient(transparent, #1c1c1c 75%); */
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+  text-align: center;
+  transition: height 0.5s;
+}
+
+.overlay h1 {
+  font-weight: 800;
+  margin-bottom: 5px;
+  font-family: 'bebas neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+
+.overlay a {
+  margin-top: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 12px; /* Adjusted font size */
+  background: #fff;
+  border-radius: 50px;
+  text-align: center;
+  padding: 8px 16px; /* Adjusted padding for better button size */
+  font-weight: 600;
+}
+
+.box:hover img {
+  transform: scale(1.1); /* Slight scaling on hover */
+}
+
+.box:hover .overlay {
+  height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .box-area {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller grid columns for tablets */
+  }
+  
+  .overlay h1 {
+    font-size: 18px; /* Smaller font size for tablets */
+  }
+  
+  .overlay a {
+    font-size: 10px; /* Smaller button text */
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #card-area {
+    padding: 50px 0; /* Reduced padding for smaller screens */
+  }
+
+  .box-area {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Smaller grid for mobile */
+    grid-gap: 10px; /* Reduced gap for mobile */
+  }
+
+  .overlay h1 {
+    font-size: 16px; /* Adjusted font size for mobile */
+  }
+
+  .overlay a {
+    font-size: 10px;
+    padding: 5px 8px; /* Smaller padding for mobile buttons */
+  }
+}

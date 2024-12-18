@@ -1,0 +1,162 @@
+/* Full-page background */
+.form-body {
+  /* height: 100vh; */
+  /* background-image: url('../../images/C5.avif'); 
+  background-size: cover; 
+  background-position: center;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.form-body img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Form container styles with adjusted width and padding */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.439);
+  padding: 20px 80px 80px;
+  padding-left: 40px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  width: 80%;
+  height: 80%;
+  max-width: 100%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 10);
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 100px;
+}
+
+/* Form header styling */
+.form-header {
+  font-size: 20px;
+  /* Reduced font size */
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Input fields and form styling */
+.form-group {
+  margin-right: -25px;
+  display: flexbox;
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.form-control {
+  width: 90%;
+  /* Make sure input fields don't overflow */
+  padding: 10px;
+  /* Reduced padding for inputs */
+  font-size: 15px;
+  /* Adjusted font size */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+/* Center the City dropdown specifically */
+.city-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.city-group select {
+  width: 300px;
+  /* You can adjust the width to fit your design */
+  height: 45px;
+  /* Consistent height with other inputs */
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Submit button */
+.form-submit {
+  display: flex;
+  justify-content: center;
+  grid-column: span 2;
+}
+
+.form-submit button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  /* Reduced padding for the button */
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-submit button:hover {
+  background-color: #0056b3;
+}
+
+
+select.form-control {
+  appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="gray"><polygon points="0,0 5,5 10,0"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 10px;
+  padding-right: 30px;
+  width: 100%;
+  /* Ensures dropdown matches width of other fields */
+  height: 40px;
+  /* Consistent height across fields */
+}
+
+
+
+/* Output section styles */
+.output-section {
+  margin-top: 20px;
+}
+
+.prediction-result {
+  background-color: rgba(0, 128, 0, 0.1);
+  /* Light green background */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-submit {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+  }
+}

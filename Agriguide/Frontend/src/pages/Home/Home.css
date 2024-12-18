@@ -1,0 +1,24 @@
+.home-page header {
+    background-image: linear-gradient(rgba(9, 54, 45, 0.75), rgba(5, 29, 35, 0.75)), url(../../utils/images/bgHome1.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header {
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-section {
+    background-image: linear-gradient(rgba(5, 10, 35, 0.75), rgba(5, 10, 35, 0.75)), url(../../utils/images/C6.jpg);
+    background-size: cover;
+    background-position: center;
+}

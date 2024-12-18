@@ -1,0 +1,11 @@
+.services-page header {
+    background-image: linear-gradient(rgba(5, 10, 35, 0.75), rgba(5, 10, 35, 0.75)), url(../../utils/images/C13.jpeg);
+}
+
+.services-page .card-img-overlay {
+    background-color: rgba(5, 10, 35, 0.7);
+}
+
+.services-page .card:hover {
+    cursor: pointer;
+}
